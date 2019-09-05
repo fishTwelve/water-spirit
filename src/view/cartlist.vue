@@ -24,7 +24,7 @@ import axios from 'axios'
         components: {YFotter, YGoods, YHeader},
         methods:{
             async getNavData() {
-                let {data} = await axios.get('/api/getwater/')
+                let {data} = await axios.get('http://47.95.214.173:8001/getwater/')
                 this.navData = data
                 // console.log(this.navData.list)
             },

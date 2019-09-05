@@ -71,7 +71,7 @@
         },
         methods: {
             async sendCartData(id) {
-                let {data} = await axios.get('/api/addshoppingcart/',{
+                let {data} = await axios.get('http://47.95.214.173:8001/addshoppingcart/',{
                     params:{
                         timeid: id,
                         username: this.$root.name
@@ -81,7 +81,7 @@
                 console.log(this.cartFlag)
             },
             async getDetailData(id) {
-                const {data} = await axios.get(`/api/getdetails/`,{
+                const {data} = await axios.get(`http://47.95.214.173:8001/getdetails/`,{
                     params:{
                         timeid: id
                     }

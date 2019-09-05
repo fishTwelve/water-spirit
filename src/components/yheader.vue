@@ -240,22 +240,22 @@
                 })
             },
             async getNavData1() {
-                let {data} = await axios.get('/api/getwater/')
+                let {data} = await axios.get('http://47.95.214.173:8001/getwater/')
                 this.navData1 = data
                 // console.log(this.navData1.list)
             },
             async getNavData2() {
-                let {data} = await axios.get('/api/getcup/')
+                let {data} = await axios.get('http://47.95.214.173:8001/getcup/')
                 this.navData2 = data
                 // console.log(this.navData2.list)
             },
             async getNavData3() {
-                let {data} = await axios.get('/api/gettea/')
+                let {data} = await axios.get('http://47.95.214.173:8001/gettea/')
                 this.navData3 = data
                 // console.log(this.navData3.list)
             },
             async getNavData4() {
-                let {data} = await axios.get('/api/getwine/')
+                let {data} = await axios.get('http://47.95.214.173:8001/getwine/')
                 this.navData4 = data
                 // console.log(this.navData4.list)
             },
@@ -263,7 +263,7 @@
                 if (this.modal1 === true) {
                     this.$refs[name].validate((valid) => {
                         if (valid) {
-                            axios.get('/api/login/', {
+                            axios.get('http://47.95.214.173:8001/login/', {
                                 params: {
                                     nickname: this.formInline1.user,
                                     password: this.formInline1.password
@@ -297,7 +297,7 @@
                     if (this.formInline2.password !== this.formInline2.repassword) {
                         this.$Message.error('两次输入密码不一致');
                     } else if (valid) {
-                        axios.get('/api/register/', {
+                        axios.get('http://47.95.214.173:8001/register/', {
                             params: {
                                 address: this.formInline2.user,
                                 nickname: this.formInline2.user,

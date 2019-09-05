@@ -51,19 +51,19 @@
         },
         methods: {
             async getNavData1() {
-                let {data} = await axios.get('/api/getwater/')
+                let {data} = await axios.get('http://47.95.214.173:8001/getwater/')
                 this.navData1 = data
             },
             async getNavData2() {
-                let {data} = await axios.get('/api/getcup/')
+                let {data} = await axios.get('http://47.95.214.173:8001/getcup/')
                 this.navData2 = data
             },
             async getNavData3() {
-                let {data} = await axios.get('/api/gettea/')
+                let {data} = await axios.get('http://47.95.214.173:8001/gettea/')
                 this.navData3 = data
             },
             async getNavData4() {
-                let {data} = await axios.get('/api/getwine/')
+                let {data} = await axios.get('http://47.95.214.173:8001/getwine/')
                 this.navData4 = data
             },
             goDetail(item){

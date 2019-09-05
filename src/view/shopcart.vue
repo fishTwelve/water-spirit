@@ -84,7 +84,7 @@
             },
 
             async getCartData() {
-                let {data} = await axios.get('/api/paythemoney/', {
+                let {data} = await axios.get('http://47.95.214.173:8001/paythemoney/', {
                     params: {
                         username: this.$root.name
                     }

@@ -43,7 +43,7 @@
                 },2000)
             },
             async getData() {
-                let {data} = await axios.get('/api/randomgetone/')
+                let {data} = await axios.get('http://47.95.214.173:8001/randomgetone/')
                 this.Data = data.fields
                 console.log(this.Data)
             },

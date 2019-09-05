@@ -23,7 +23,7 @@
         components: {YFotter, YGoods, YHeader},
         methods:{
             async getNavData() {
-                let {data} = await axios.get('/api/getcup/')
+                let {data} = await axios.get('http://47.95.214.173:8001/getcup/')
                 this.navData = data
                 // console.log(this.navData.list)
             },
